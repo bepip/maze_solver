@@ -1,7 +1,15 @@
-from window import Window
+from window import (
+    Window, 
+    Line,
+    Point
+)
 
 def main():
-    win = Window(800,600)
+    height = 600
+    width = 800
+    win = Window(width, height)
+    line = Line(Point(0,0), Point(width, height))
+    win.draw_line(line)
     win.wait_for_close()
 
 main()
